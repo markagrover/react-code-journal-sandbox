@@ -1,6 +1,10 @@
 # react-code-journal-sandbox
 
 ## Make sure your mongod server is running befor you start the application
+### if on mac and global mongo is not running unless in sudo mode
+```sudo chown -R `id -un` /data/db```
+
+On windows and having trouble? Your going to have to use google, Sorry.
 
 ### To run this file.
 
@@ -37,3 +41,5 @@
 #### In components/App we have our Browser Router with Front end Routing
 #### in our Client/src/index we have our call to ReactDOM.render() and Our Provider wrapper for Redux Store.
 #### We created our Store in the client/src/index and tied in our middlewares like redux-flux. We also imported our global materailize css.
+
+# Keep up with Project Changes In PROJECT_OVERVIEW.md
