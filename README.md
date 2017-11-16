@@ -8,23 +8,24 @@ On windows and having trouble? Your going to have to use google, Sorry.
 
 ### To run this file.
 
-```npm install or yarn install```
+`npm install or yarn install`
 
-```cd client```
+`cd client`
 
-```npm install or yarn install```
+`npm install or yarn install`
 
-```cd ../ ```
+`cd ../ `
 
-```npm run dev```
+`npm run dev`
 
 ### There are two routes set up in the Index.js File of the root project directory.
 
-1) localhost:3000/
+1) [localhost:3000/][1]
 
-2) localhost:3000/todos
 
-#### Both routes have Actions and Reducers wired Up Through Redux
+2) [localhost:3000/todos][2]
+
+###### Both routes have Actions and Reducers wired Up Through Redux
 
 #### In Models There is a /index.js file with db connection configurations
 #### also there is a model for todos
@@ -43,3 +44,12 @@ On windows and having trouble? Your going to have to use google, Sorry.
 #### We created our Store in the client/src/index and tied in our middlewares like redux-flux. We also imported our global materailize css.
 
 # Keep up with Project Changes In PROJECT_OVERVIEW.md
+
+[1]: http://localhost:3000/
+[2]: http://localhost:3000/todos
+
+Example of Using HTML in md (markDown) files. <ul id="li" style="padding: 20px;"><li style="padding: 20px;background-color: red;">ListTag</li>
+
+
+
+
