@@ -1,11 +1,12 @@
-import { combineReducers } from 'redux';
-import { reducer as reduxForm } from 'redux-form';
-import test  from './testReducer';
-import todos  from './todosReducer';
-
+import { combineReducers } from "redux";
+import { reducer as reduxForm } from "redux-form";
+import test from "./testReducer";
+import todos from "./todosReducer";
+import auth from "./authReducer";
 
 export default combineReducers({
-    todos: todos,
-    test: test,
-    form: reduxForm
+  auth: auth,
+  todos: todos,
+  test: test,
+  form: reduxForm
 });
