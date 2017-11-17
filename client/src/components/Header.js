@@ -29,9 +29,12 @@ class Header extends Component {
             to={this.props.auth ? "/todos" : "/"}
             className="left brand-logo"
           >
-            CJ
+            Code Journal
           </Link>
           <ul id="nav-mobile" className="right">
+            <li>
+              <Link to="/todos">TODOS</Link>
+            </li>
             {this.renderContent()}
           </ul>
         </div>
