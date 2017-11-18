@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import Button from 'react-toolbox/lib/button/Button';
 
 class Header extends Component {
   renderContent() {
@@ -23,22 +24,32 @@ class Header extends Component {
   }
   render() {
     return (
-      <nav>
-        <div className="nav-wrapper blue-grey ">
-          <Link
-            to={this.props.auth ? "/todos" : "/"}
-            className="left brand-logo"
-          >
-            Code Journal
-          </Link>
-          <ul id="nav-mobile" className="right">
-            <li>
-              <Link to="/todos">TODOS</Link>
-            </li>
-            {this.renderContent()}
-          </ul>
+        <div>
+          <nav>
+            <div className="nav-wrapper blue-grey ">
+              <Link
+                  to={this.props.auth ? "/todos" : "/"}
+                  className="left brand-logo"
+              >
+                Code Journal
+              </Link>
+              <ul id="nav-mobile" className="right">
+                <li>
+                  <Link to="/todos">TODOS</Link>
+                </li>
+                  {this.renderContent()}
+              </ul>
+            </div>
+          </nav>
+          <div>
+            <Button icon='bookmark' label='Bookmark' accent />
+            <Button icon='bookmark' label='Bookmark' raised primary />
+            <Button icon='inbox' label='Inbox' flat />
+            <Button icon='add' floating />
+            <Button icon='add' floating accent mini />
+          </div>
         </div>
-      </nav>
+
     );
   }
 }
