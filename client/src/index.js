@@ -1,7 +1,6 @@
 import './assets/react-toolbox/theme.css';
 import theme from './assets/react-toolbox/theme.js';
 import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
-import "materialize-css/dist/css/materialize.min.css";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -17,7 +16,7 @@ const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 ReactDOM.render(
   <Provider store={store}>
       <ThemeProvider theme={theme}>
-    <App />
+        <App />
       </ThemeProvider>
   </Provider>,
   document.getElementById("root")

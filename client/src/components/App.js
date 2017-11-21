@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import MGRouter from './Router';
 import { connect } from "react-redux";
 import * as actions from "../actions";
-import Test from "../components/Test";
-import Todos from "../components/Todos";
-import Header from "../components/Header";
+import MainLayout from '../components/layouts/MainLayout';
+import { BrowserRouter } from 'react-router-dom';
+import Todos from './Todos';
+import Test from './Test';
 
 class App extends Component {
   constructor(props) {
@@ -12,23 +13,23 @@ class App extends Component {
 
     this.state = {};
   }
-
   componentDidMount() {
     this.props.fetchTest();
     this.props.fetchTodos();
     this.props.fetchUser();
   }
   render() {
+      // Add new routes here and pass in components.
     return (
-      <div>
-        <BrowserRouter>
-          <div className="container">
-            <Header />
-            <Route exact path="/" component={Test} />
-            <Route exact path="/todos" component={Todos} />
-          </div>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <MainLayout MGRouter={<MGRouter
+            routes={{
+                "/": () => <h1>Landing...</h1>,
+                "/todos": Todos  ,
+                "/test": Test
+            }} />
+            }/>
+      </BrowserRouter>
     );
   }
 }
